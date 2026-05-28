@@ -7,7 +7,7 @@
         mc:Ignorable="d"
        Title="Moja Lista do Obejrzenia" Height="450" Width="600">
 
-    <!-- Podpięcie ViewModelu z tej samej przestrzeni nazw -->
+   
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>
@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Sekcja filtrowania -->
+        
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
             <Label Content="Szukaj (Tytuł/Gatunek):" VerticalAlignment="Center"/>
             <TextBox Width="200" Height="25" VerticalAlignment="Center" 
@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Lista filmów i usuwanie -->
+            
             <DockPanel Grid.Column="0" Margin="0,0,10,0">
                 <Button DockPanel.Dock="Bottom" Content="Usuń zaznaczony film" Height="30" Margin="0,10,0,0"
                         Command="{Binding DeleteMovieCommand}"/>
@@ -39,7 +39,7 @@
                          SelectedItem="{Binding SelectedMovie}"/>
             </DockPanel>
 
-            <!-- Formularz dodawania -->
+            
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Dodaj nowy film" FontWeight="Bold" Margin="0,0,0,10"/>
 
